@@ -8,12 +8,11 @@ class Bullet(Sprite):
         super().__init__()
         self.screen = screen
 
-        self.rect = pygame.Rect(0, 0, ai_settings.bullet_width,
-                                ai_settings.bullet_hight)
+        self.rect = pygame.Rect(
+            0, 0, ai_settings.bullet_width, ai_settings.bullet_height)
         # bullet emerges above ship to look like it is fired
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
-
         # make fine adjustments with floating point number
         self.y = float(self.rect.y)
 
